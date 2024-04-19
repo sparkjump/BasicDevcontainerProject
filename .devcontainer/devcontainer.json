@@ -1,0 +1,14 @@
+{
+    "name": "DEV_Container",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "devcontainer",
+    "workspaceFolder": "${localWorkspaceFolder}", // wsl workspace = devcontainer workspace
+    "mounts": [
+        "source=${localWorkspaceFolder},target=${localWorkspaceFolder},type=bind,consistency=cached", // mount same location on wsl & devcontainer
+        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" //use same docker daemon for the registry as the host.
+    ],
+    "containerEnv": {
+        "CCACHE_BASEDIR": "${localWorkspaceFolder}",
+        "CCACHE_DIR": "${localWorkspaceFolder}/.ccache"
+    }
+}
