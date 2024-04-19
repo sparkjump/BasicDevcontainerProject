@@ -27,6 +27,9 @@ RUN apt-get update \
     git \
     ca-certificates \
     curl \
+    fzf \
+    ripgrep \
+    bat \
     # Cleanup
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
@@ -42,6 +45,11 @@ RUN echo "deb https://apt.llvm.org/bookworm llvm-toolchain-bookworm-16 main" \
     ln -sf clang-format-16 /usr/bin/clang-format && \
     ln -sf clang-tidy-16 /usr/bin/clang-tidy && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
+
+#########################################
+# Install docker using the get.docker script. This will put out some warnings about WSL and sleep for 20 seconds
+RUN curl -fsSL https://get.docker.com | sh && \
+    usermod -a -G docker ${USERNAME}
 
 # Switch to the non-root user when the container starts
 WORKDIR /home/${USERNAME}

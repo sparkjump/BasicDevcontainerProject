@@ -10,5 +10,12 @@
     "containerEnv": {
         "CCACHE_BASEDIR": "${localWorkspaceFolder}",
         "CCACHE_DIR": "${localWorkspaceFolder}/.ccache"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-docker"
+            ]
+        }
     }
 }

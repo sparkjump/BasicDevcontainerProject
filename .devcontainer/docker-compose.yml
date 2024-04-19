@@ -3,4 +3,9 @@ services:
     build:
       context: .docker
       dockerfile: Dockerfile
+    environment:
+      - USERNAME=dev
+      - USER_UID=1000
+      - USER_GID=1000
+    user: "1000:1000"
     command: sleep infinity

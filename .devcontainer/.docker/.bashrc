@@ -13,3 +13,9 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 alias g='git'
+alias bat='batcat'
+alias cat='batcat'
+
+# if you like to use FindItFaster
+# sudo ln -s /usr/bin/batcat /usr/local/bin/bat
+
