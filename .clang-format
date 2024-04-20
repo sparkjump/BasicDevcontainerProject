@@ -1,0 +1,42 @@
+---
+# General:
+BasedOnStyle: Google
+Language: Cpp
+UseTab: Never
+TabWidth: 2
+ColumnLimit: 0
+InsertNewlineAtEOF: true
+DerivePointerAlignment: false
+QualifierAlignment: Left
+PointerAlignment: Left
+ReferenceAlignment: Left
+CompactNamespaces: true
+
+#Namespaces:
+ShortNamespaceLines: 10
+
+# Braces:
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel: true
+  AfterClass: true
+  AfterStruct: true
+  AfterControlStatement: true
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: false
+  BeforeElse: true
+
+# Control Statements
+AllowShortBlocksOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: WithoutElse
+
+# Functions:
+AllowShortFunctionsOnASingleLine: None
+
+# Classes:
+IndentAccessModifiers: true
+EmptyLineAfterAccessModifier: Always
+PackConstructorInitializers: Never
+BreakConstructorInitializers: BeforeComma
+ConstructorInitializerIndentWidth: 0
